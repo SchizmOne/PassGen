@@ -22,7 +22,7 @@ namespace PassGen
 
             if (args.Length != 0)
             {
-
+                int b;
                 CharactersSet[] characterOption = new CharactersSet[4];
                 if (args.Contains("-A")) characterOption[0] = CharactersSet.lowerCaseSymbols;
                 if (args.Contains("-c")) characterOption[1] = CharactersSet.biggerCaseSymbols;
