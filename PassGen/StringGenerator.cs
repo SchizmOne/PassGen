@@ -10,7 +10,7 @@ namespace PassGen
     class StringGenerator
     {
 
-        public static string ChooseCharactersSet(int passwordLength, params CharactersSet[] charactersOption)
+        public static string ChooseCharactersSet(int passwordLength, params ArgumentKeys[] charactersOption)
         {
             const string lowerCaseSymbols =  "abcdefghijklmnopqrstuvwxyz",
                          biggerCaseSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -18,13 +18,13 @@ namespace PassGen
                          numbersSymbols =    "1234567890";
 
             string resultCharacterSet = "";
-            if (charactersOption.Contains(CharactersSet.lowerCaseSymbols))
+            if (charactersOption.Contains(ArgumentKeys.lowerCaseSymbols))
                 resultCharacterSet += lowerCaseSymbols;
-            if (charactersOption.Contains(CharactersSet.biggerCaseSymbols))
+            if (charactersOption.Contains(ArgumentKeys.biggerCaseSymbols))
                 resultCharacterSet += biggerCaseSymbols;
-            if (charactersOption.Contains(CharactersSet.specialSymbols))
+            if (charactersOption.Contains(ArgumentKeys.specialSymbols))
                 resultCharacterSet += specialSymbols;
-            if (charactersOption.Contains(CharactersSet.numbersSymbols))
+            if (charactersOption.Contains(ArgumentKeys.numbersSymbols))
                 resultCharacterSet += numbersSymbols;
 
             return GenerateString(passwordLength, resultCharacterSet);
