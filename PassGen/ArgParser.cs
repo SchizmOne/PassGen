@@ -8,8 +8,10 @@ namespace PassGen
 {
     static class ArgParser
     {
-        public static void KeysParser(string[] args, out ArgumentKeys[] options,
-                                      out int passwordLength, out int numberOfPasswords)
+        public static void KeysParser(string[] args,
+                                      out ArgumentKeys[] options,
+                                      out int passwordLength,
+                                      out int numberOfPasswords)
         {
             // Создадим массив ключей.
             options = new ArgumentKeys[4];
@@ -74,28 +76,28 @@ namespace PassGen
                 if (options[positionInOptions] == ArgumentKeys.lowerCaseSymbols)
                 {
                     optionsStringOutput[positionInOptions] = "Латиница в нижнем регистре";
-                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGray);
+                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGreen);
                     Console.WriteLine(optionsStringOutput[positionInOptions]);
                 }
                     
                 if (options[positionInOptions] == ArgumentKeys.biggerCaseSymbols)
                 {
                     optionsStringOutput[positionInOptions] = "Латиница в верхнем регистре";
-                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGray);
+                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGreen);
                     Console.WriteLine(optionsStringOutput[positionInOptions]);
                 }
                     
                 if (options[positionInOptions] == ArgumentKeys.numbersSymbols)
                 {
                     optionsStringOutput[positionInOptions] = "Арабские цифры";
-                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGray);
+                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGreen);
                     Console.WriteLine(optionsStringOutput[positionInOptions]);
                 }
                     
                 if (options[positionInOptions] == ArgumentKeys.specialSymbols)
                 {
                     optionsStringOutput[positionInOptions] = "Специальные символы";
-                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGray);
+                    ForegroundColorStringOutput($"[{positionInOptions}]\t", ConsoleColor.DarkGreen);
                     Console.WriteLine(optionsStringOutput[positionInOptions]);
                 }   
             }

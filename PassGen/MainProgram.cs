@@ -32,7 +32,7 @@ namespace PassGen
                 ArgParser.FormatOutput(options, passwordLength, numberOfPasswords);
                 for (int i = 0; i < numberOfPasswords; i++)
                 {
-                    ArgParser.ForegroundColorStringOutput($"[{i}]\t", ConsoleColor.DarkGray);
+                    ArgParser.ForegroundColorStringOutput($"[{i}]\t", ConsoleColor.DarkGreen);
                     Console.WriteLine(StringGenerator.ChooseCharactersSet(passwordLength, options));
                 }
 
