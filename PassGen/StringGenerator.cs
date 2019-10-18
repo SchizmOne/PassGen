@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace PassGen
@@ -10,7 +8,7 @@ namespace PassGen
     class StringGenerator
     {
 
-        public static string ChooseCharactersSet(int passwordLength, params ArgumentKeys[] charactersOption)
+        public static string ChooseCharactersSet(int passwordLength, List<ArgumentKeys> charactersOption)
         {
             const string lowerCaseSymbols =  "abcdefghijklmnopqrstuvwxyz",
                          biggerCaseSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
