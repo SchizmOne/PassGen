@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PassGen.Modules;
+
 
 namespace PassGen
 {
@@ -13,7 +13,7 @@ namespace PassGen
         specialSymbols
     }
 
-    static class MainProgram
+    static class Program
     {
         static void Main(string[] args)
         {

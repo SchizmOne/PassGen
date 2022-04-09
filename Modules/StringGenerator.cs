@@ -1,12 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 
-namespace PassGen
+
+namespace PassGen.Modules
 {
     class StringGenerator
     {
+        private static RandomNumberGenerator cryptoProvider = RandomNumberGenerator.Create();
 
         public static string ChooseCharactersSet(int passwordLength, List<ArgumentKeys> charactersOption)
         {
@@ -34,10 +33,7 @@ namespace PassGen
             char[] result = new char[length];
             var characterArray = characterSet.Distinct().ToArray();
 
-            using (var cryptoProvider = new RNGCryptoServiceProvider())
-            {
-                cryptoProvider.GetBytes(bytes);
-            }
+            cryptoProvider.GetBytes(bytes);
             for (int i = 0; i < length; i++)
             {
                 ulong value = BitConverter.ToUInt64(bytes, i * 8);
